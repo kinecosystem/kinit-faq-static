@@ -3,6 +3,11 @@ body {
     color: #a4acc2;
 }
 
+.btn-halo:active {
+    background: #047cfc;
+    color: #fff
+}
+
 /* Acordeon styles */
 .tab {
     position: relative;
@@ -49,7 +54,7 @@ body {
     font-weight: 300;
 }
 
-.tab-content p:not(:last-child){
+.tab-content p{
     border-bottom: solid 1px #d7dce9;
 }
 
@@ -110,7 +115,7 @@ body {
 }
 
 .header {
-    height: 90px;
+    height: 50px;
 }
 
 .header .info {
