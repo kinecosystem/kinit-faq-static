@@ -78,12 +78,13 @@ body {
 }
 .tab input[type=checkbox] + label::after {
     font-size: 30px;
-    content: "›";
-    transform: rotate(-90deg);
-    margin-top: -20px
+    content: "›"; 
+    margin-top: -20px;
+
+    transform: rotate(90deg);
 }
 .tab input[type=checkbox]:checked + label::after {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 
 
