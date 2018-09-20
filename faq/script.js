@@ -2,7 +2,6 @@ $(document).ready(() => {
 
     const faqCategory = $("#category").text().replace(/(\r\n\t|\n|\r\t)/gm, "").trim();
     const faqTitle = $(document).find("title").text().replace(/(\r\n\t|\n|\r\t)/gm, "").trim();
-    const backBtn = $("#backBtn").click(() => window.history.back())
 
     let isPageHelpfulSelection, pageLoaded, contactSupport
     if (window.webkit != undefined) {
@@ -38,7 +37,11 @@ $(document).ready(() => {
     }
 
     const callback = {
-        isPageHelpfulSelection: (faqCategory, faqTitle, isHelpful) => { isPageHelpfulSelection({ faqCategory, faqTitle, isHelpful }) },
+        isPageHelpfulSelection: (faqCategory, faqTitle, isHelpful) => {
+            isPageHelpfulSelection({ faqCategory, faqTitle, isHelpful })
+            $(".yes-no").remove();
+            $(".feedback div").text("Thank you for your feedback!")
+        },
         pageLoaded: (faqCategory, faqTitle) => { pageLoaded({ faqCategory, faqTitle }) },
         contactSupport: (faqCategory, faqTitle) => { contactSupport({ faqCategory, faqTitle }) }
     }
