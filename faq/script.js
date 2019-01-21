@@ -1,7 +1,7 @@
 $(document).ready(() => {
 
     const faqCategory = $("#category").text().replace(/(\r\n\t|\n|\r\t)/gm, "").trim();
-    const faqTitle = $(document).find("title").text().replace(/(\r\n\t|\n|\r\t)/gm, "").trim();
+    const faqSubCategory = $(document).find("title").text().replace(/(\r\n\t|\n|\r\t)/gm, "").trim();
 
     let isPageHelpfulSelection, pageLoaded, contactSupport
     if (window.webkit != undefined) {
@@ -20,15 +20,15 @@ $(document).ready(() => {
     } else if (window.Kinit != undefined) {
         isPageHelpfulSelection = (data) => {
             console.log(data);
-            Kinit.isPageHelpfulSelection(data.faqCategory, data.faqTitle, data.isHelpful)
+            Kinit.isPageHelpfulSelection(data.faqCategory, data.faqSubCategory, data.isHelpful)
         };
         pageLoaded = (data) => {
             console.log(data);
-            window.Kinit.pageLoaded(data.faqCategory, data.faqTitle)
+            window.Kinit.pageLoaded(data.faqCategory, data.faqSubCategory)
         };
         contactSupport = (data) => {
             console.log(data);
-            window.Kinit.contactSupport(data.faqCategory, data.faqTitle)
+            window.Kinit.contactSupport(data.faqCategory, data.faqSubCategory)
         };
     } else {
         isPageHelpfulSelection = (data) => { }
@@ -37,19 +37,20 @@ $(document).ready(() => {
     }
 
     const callback = {
-        isPageHelpfulSelection: (faqCategory, faqTitle, isHelpful) => {
-            isPageHelpfulSelection({ faqCategory, faqTitle, isHelpful })
+        isPageHelpfulSelection: (faqCategory, faqSubCategory, isHelpful) => {
+            isPageHelpfulSelection({ faqCategory, faqSubCategory, isHelpful })
             $(".yes-no").remove();
             $(".feedback div").text("Thank you for your feedback!")
         },
-        pageLoaded: (faqCategory, faqTitle) => { pageLoaded({ faqCategory, faqTitle }) },
-        contactSupport: (faqCategory, faqTitle) => { contactSupport({ faqCategory, faqTitle }) }
+        pageLoaded: (faqCategory, faqSubCategory) => { pageLoaded({ faqCategory, faqSubCategory }) },
+        contactSupport: (faqCategory, faqSubCategory) => { contactSupport({ faqCategory, faqSubCategory }) }
     }
 
 
-    callback.pageLoaded(faqCategory, faqTitle)
+    callback.pageLoaded(faqCategory, faqSubCategory)
 
-    $("#contact-support").click(() => { callback.contactSupport(faqCategory, faqTitle) })
-    $("#helpful-yes").click(() => { callback.isPageHelpfulSelection(faqCategory, faqTitle, true) })
-    $("#helpful-no").click(() => { callback.isPageHelpfulSelection(faqCategory, faqTitle, false) })
+    $("#contact-support").click(() => { callback.contactSupport(faqCategory, faqSubCategory) })
+    $("#helpful-yes").click(() => { callback.isPageHelpfulSelection(faqCategory, faqSubCategory, true) })
+    $("#helpful-no").click(() => { callback.isPageHelpfulSelection(faqCategory, faqSubCategory, false) })
+
 })
