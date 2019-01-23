@@ -9,22 +9,26 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="/faq/style.css">
+
+    <base href="https://s3.amazonaws.com/kinapp-static/faq2/">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/faq/script.js"></script>
+    <script src="./script.js"></script>
     <title>Backup & Restore</title>
 </head>
 
 <body>
     <div class="wrapper-text">
         <div class="header">
-            <p id="category">Uninstalling / Reinstalling the app</p>
+            <p id="sub_category">Uninstalling / Reinstalling the app</p>
             <span class="info">ⓘ</span>
             </span><span> 05 Sep 18</span>
         </div>
-        <p class="text">Uninstalling the app without completing the backup flow will erase your balance without any way to
-            restore it. For this reason, we highly recommend that you backup your account. <br/><br/> When you reinstall
-            the app, without using the restore functionality, the app automatically creates a new account. <br/><br/>You
+        <p class="text">Uninstalling the app without completing the backup flow will erase your balance without any way
+            to
+            restore it. For this reason, we highly recommend that you backup your account. <br /><br /> When you
+            reinstall
+            the app, without using the restore functionality, the app automatically creates a new account. <br /><br />You
             will resume with the following task from which you left off, but your balance will start from zero.
 
 
@@ -42,12 +46,17 @@
 
     <div class="more-help">
         <span class="text">Still need help?</span>
-        <span class="btn" id="contact-support">Contact Us</span>
+        <span id="contact-support"><a class="btn" href="https://s3.amazonaws.com/kinapp-static/faq2/contact-us.html">Contact
+                Us</a></span>
     </div>
 
     <div class="tab-content visable">
-        <a href="/faq/pages/backup/how-to-backup.html"><p>How to backup your account</p></a>
-        <a href="/faq/pages/backup/new-device.html"><p>Moving to a new device</p></a>
+        <a href="pages/backup/how-to-backup.html">
+            <p>How to backup your account</p>
+        </a>
+        <a href="pages/backup/new-device.html">
+            <p>Moving to a new device</p>
+        </a>
     </div>
 </body>
 

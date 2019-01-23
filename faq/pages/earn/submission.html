@@ -9,16 +9,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="/faq/style.css">
+
+    <base href="https://s3.amazonaws.com/kinapp-static/faq2/">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/faq/script.js"></script>
+    <script src="./script.js"></script>
     <title>Earn Activities</title>
 </head>
 
 <body>
     <div class="wrapper-text">
         <div class="header">
-            <p id="category">Moving to a new device</p>
+            <p id="sub_category">Moving to a new device</p>
             <span class="info">ⓘ</span>
             </span><span> 05 Sep 18</span>
         </div>
@@ -34,9 +36,12 @@
             </li>
         </ol>
         <p class="text">
-            If neither of these options worked, please reach out to us so we can investigate this further. <br/><br/> For
-            iOS users, if you run into the issue of not being able to submit your answers on the very first task; please
-            check that the Background App Refresh is set to ‘On’ in the general section of your phone’s settings. <br/><br/>            Additionally,
+            If neither of these options worked, please reach out to us so we can investigate this further. <br /><br />
+            For
+            iOS users, if you run into the issue of not being able to submit your answers on the very first task;
+            please
+            check that the Background App Refresh is set to ‘On’ in the general section of your phone’s settings. <br /><br />
+            Additionally,
             it is always helpful to check that your phone’s date and time match your relevant timezone.
 
         </p>
@@ -53,13 +58,20 @@
 
     <div class="more-help">
         <span class="text">Still need help?</span>
-        <span class="btn" id="contact-support">Contact Us</span>
+        <span id="contact-support"><a class="btn" href="https://s3.amazonaws.com/kinapp-static/faq2/contact-us.html">Contact
+                Us</a></span>
     </div>
 
     <div class="tab-content visable">
-        <a href="/faq/pages/earn/settings-prefs.html"><p>Settings / Preferences</p></a>
-        <a href="/faq/pages/earn/no-reward.html"><p>Not receiving a reward</p></a>
-        <a href="/faq/pages/earn/no-activities.html?ver=2"><p>Not getting new activities</p></a>
+        <a href="pages/earn/settings-prefs.html">
+            <p>Settings / Preferences</p>
+        </a>
+        <a href="pages/earn/no-reward.html">
+            <p>Not receiving a reward</p>
+        </a>
+        <a href="pages/earn/no-activities.html?ver=2">
+            <p>Not getting new activities</p>
+        </a>
     </div>
 </body>
 

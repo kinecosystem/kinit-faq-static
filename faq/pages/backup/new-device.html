@@ -9,23 +9,29 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="/faq/style.css">
+
+    <base href="https://s3.amazonaws.com/kinapp-static/faq2/">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/faq/script.js"></script>
+    <script src="./script.js"></script>
     <title>Backup & Restore</title>
 </head>
 
 <body>
     <div class="wrapper-text">
         <div class="header">
-            <p id="category">Moving to a new device</p>
+            <p id="sub_category">Moving to a new device</p>
             <span class="info">ⓘ</span>
             </span><span> 05 Sep 18</span>
         </div>
-        <p class="text">Got a new device? Great for you! Remember to restore your account when you install the Kinit app
-            (in the case you have already completed the backup flow in advance). If you didn’t back up your account on your
-            previous device, you will not be able to get your balance back. <br/><br/> If your previous device is still available,
-            we highly recommend you to backup your account so that you can restore it on your new device and continue using
+        <p class="text">Got a new device? Great for you! Remember to restore your account when you install the Kinit
+            app
+            (in the case you have already completed the backup flow in advance). If you didn’t back up your account on
+            your
+            previous device, you will not be able to get your balance back. <br /><br /> If your previous device is
+            still available,
+            we highly recommend you to backup your account so that you can restore it on your new device and continue
+            using
             the app with your previous balance.
         </p>
     </div>
@@ -41,12 +47,17 @@
 
     <div class="more-help">
         <span class="text">Still need help?</span>
-        <span class="btn" id="contact-support">Contact Us</span>
+        <span id="contact-support"><a class="btn" href="https://s3.amazonaws.com/kinapp-static/faq2/contact-us.html">Contact
+                Us</a></span>
     </div>
 
     <div class="tab-content visable">
-        <a href="/faq/pages/backup/how-to-backup.html"><p>How to backup your account</p></a>
-        <a href="/faq/pages/backup/install-uninstall.html"><p>Uninstalling / Reinstalling the app</p></a>
+        <a href="pages/backup/how-to-backup.html">
+            <p>How to backup your account</p>
+        </a>
+        <a href="pages/backup/install-uninstall.html">
+            <p>Uninstalling / Reinstalling the app</p>
+        </a>
     </div>
 </body>
 

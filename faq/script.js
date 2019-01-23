@@ -1,7 +1,7 @@
 $(document).ready(() => {
 
-    const faqCategory = $("#category").text().replace(/(\r\n\t|\n|\r\t)/gm, "").trim();
-    const faqSubCategory = $(document).find("title").text().replace(/(\r\n\t|\n|\r\t)/gm, "").trim();
+    const faqSubCategory = $("#sub_category").text().replace(/(\r\n\t|\n|\r\t)/gm, "").trim();
+    const faqCategory = $(document).find("title").text().replace(/(\r\n\t|\n|\r\t)/gm, "").trim();
 
     let isPageHelpfulSelection, pageLoaded, contactSupport
     if (window.webkit != undefined) {
@@ -13,10 +13,9 @@ $(document).ready(() => {
             console.log(data);
             window.webkit.messageHandlers.pageLoaded.postMessage(data)
         };
-        contactSupport = (data) => {
-            console.log(data);
-            window.webkit.messageHandlers.contactSupport.postMessage(data)
-        };
+        contactSupport = () => {
+            window.webkit.messageHandlers.contactSupport.postMessage()
+        }
     } else if (window.Kinit != undefined) {
         isPageHelpfulSelection = (data) => {
             console.log(data);
@@ -28,12 +27,12 @@ $(document).ready(() => {
         };
         contactSupport = (data) => {
             console.log(data);
-            window.Kinit.contactSupport(data.faqCategory, data.faqSubCategory)
-        };
+            window.Kinit.contactSupport()
+        }
     } else {
-        isPageHelpfulSelection = (data) => { }
-        pageLoaded = (data) => { }
-        contactSupport = (data) => { }
+        isPageHelpfulSelection = () => { }
+        pageLoaded = () => { }
+        contactSupport = () => { }
     }
 
     const callback = {
@@ -43,13 +42,16 @@ $(document).ready(() => {
             $(".feedback div").text("Thank you for your feedback!")
         },
         pageLoaded: (faqCategory, faqSubCategory) => { pageLoaded({ faqCategory, faqSubCategory }) },
-        contactSupport: (faqCategory, faqSubCategory) => { contactSupport({ faqCategory, faqSubCategory }) }
+        contactSupport: () => { contactSupport() }
+    }
+
+    if ($("#contact-support a").length > 0 && faqCategory != "" && faqSubCategory != "") {
+        let link = $("#contact-support a").attr("href")
+        $("#contact-support a").attr("href", link + "?category=" + encodeURIComponent(faqCategory) + "&sub_category=" + encodeURIComponent(faqSubCategory))
     }
 
 
     callback.pageLoaded(faqCategory, faqSubCategory)
-
-    $("#contact-support").click(() => { callback.contactSupport(faqCategory, faqSubCategory) })
     $("#helpful-yes").click(() => { callback.isPageHelpfulSelection(faqCategory, faqSubCategory, true) })
     $("#helpful-no").click(() => { callback.isPageHelpfulSelection(faqCategory, faqSubCategory, false) })
 
