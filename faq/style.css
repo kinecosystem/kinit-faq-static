@@ -383,13 +383,8 @@ textarea.form-control:focus {
 }
 
 .form-submit.enabled {
-    background-color: #047cfc;
-    color: #fff;
-}
-
-.form-submit.disabled {
     background-color: #fff;
-    color: #d7dce9;
+    color: #047cfc;
 }
 
 .hidden {
@@ -414,9 +409,9 @@ p.body {
 }
 
 .loader {
-    border: 8px solid #f3f3f3;
+    border: 8px solid #3498db;
     /* Light grey */
-    border-top: 8px solid #3498db;
+    border-top: 8px solid #f3f3f3;
     /* Blue */
     border-radius: 50%;
     height: 40px;
