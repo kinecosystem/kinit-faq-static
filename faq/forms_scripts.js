@@ -9,6 +9,13 @@ $(document).ready(() => {
     const faqCategory = decodeURIComponent(urlParam('category'));
     const faqSubCategory = decodeURIComponent(urlParam('sub_category'));
 
+    window.setMiscFormData = (user_id, platform, version, debug) => {
+        $('#user_id').val(user_id)
+        $('#platform').val(platform);
+        $('#version').val(version);
+        $('#debug').val(debug);
+    }
+
     window.submitForm = () => {
 
         $('#submit-form').hide()
@@ -30,7 +37,7 @@ $(document).ready(() => {
                 if (endpoint == '/contact-us') {
                     window.Events.supportRequestSent({ faqCategory, faqSubCategory })
                 } else if (endpoint == '/feedback') {
-                    window.Events.feedbackRequestSent()
+                    window.Events.feedbackFormSent()
                 }
                 window.location.replace(redirect + onSuccessEndpoint)
             },

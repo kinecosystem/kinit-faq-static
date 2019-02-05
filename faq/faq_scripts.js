@@ -8,7 +8,7 @@ $(document).ready(() => {
         let link = $("#contact-support a").attr("href")
         $("#contact-support a").attr("href", link + "?category=" + encodeURIComponent(faqCategory) + "&sub_category=" + encodeURIComponent(faqSubCategory))
         $("#contact-support a").click(() => {
-            Events.contactSupport()
+            Events.contactSupport({ faqCategory, faqSubCategory })
         })
     }
     if (typeof Events !== "undefined") {
