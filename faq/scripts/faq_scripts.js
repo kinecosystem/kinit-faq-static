@@ -11,7 +11,7 @@ $(document).ready(() => {
             Events.contactSupport({ faqCategory, faqSubCategory })
         })
     }
-    if (typeof Events !== "undefined") {
+    if (!jQuery.isEmptyObject(Events)) {
         Events.pageLoaded({ faqCategory, faqSubCategory })
         $("#helpful-yes").click(() => {
             Events.isPageHelpfulSelection({ faqCategory, faqSubCategory, isHelpful: true })

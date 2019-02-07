@@ -23,8 +23,8 @@ $(document).ready(() => {
 
         host = $('#debug').val() != 'false' ? "https://stage2.kinitapp.com" : "https://api2.kinitapp.com"
         redirect = "https://s3.amazonaws.com/kinapp-static/faq2"
-        endpoint = $("#ticket").attr("name") == "contact-us" ? "/contact-us" : "/feedback"
-        onSuccessEndpoint = $("#ticket").attr("name") == "contact-us" ? "/ticket-submitted.html" : "/feedback-submitted.html"
+        endpoint = $("#ticket").attr("name") == "contact-us" ? "/support/contact-us" : "/support/feedback"
+        onSuccessEndpoint = $("#ticket").attr("name") == "contact-us" ? "/support/ticket-submitted.html" : "/support/feedback-submitted.html"
         data = $("#ticket").serializeObject()
 
         $.ajax({
@@ -66,34 +66,39 @@ $(document).ready(() => {
         $("#sub_category").find('option').remove()
         $("#sub_category").append($('<option>', { text: '- choose -' }))
 
-        switch ($("#category").val()) {
-            case "Backup & Restore":
-                $("#sub_category").append($('<option>', { text: "How to backup your account" }))
-                $("#sub_category").append($('<option>', { text: "Uninstalling / Reinstalling the app" }))
-                $("#sub_category").append($('<option>', { text: "Moving to a new device" }))
-                break;
-            case "Earn Activities":
-                $("#sub_category").append($('<option>', { text: "Not getting new activities" }))
-                $("#sub_category").append($('<option>', { text: "Not getting a reward" }))
-                $("#sub_category").append($('<option>', { text: "Settings / Preferences" }))
-                $("#sub_category").append($('<option>', { text: "Moving to a new device" }))
-                break;
-            case "Gift Cards":
-                $("#sub_category").append($('<option>', { text: "Code is missing after payment" }))
-                $("#sub_category").append($('<option>', { text: "Specific offer disappeared" }))
-                break;
-            case "Invite Friends":
-                $("#sub_category").append($('<option>', { text: "How to invite friends" }))
-                $("#sub_category").append($('<option>', { text: "Referral Program" }))
-                break;
-            case "Transferring Kin":
-                $("#sub_category").append($('<option>', { text: "Transferring Kin to another Kin app" }))
-                $("#sub_category").append($('<option>', { text: "Transferring Kin to / from an exchange wallet" }))
-            case "Other":
-                $("#sub_category").append($('<option>', { text: "On-boarding error" }))
-                break;
-        }
-
+        /** GENERATED CODE */
+		switch ($("#category").val()) {
+			case "Send Kin":
+				$("#sub_category").append($("<option>", { text: "Send Kin to another app"}));
+				$("#sub_category").append($("<option>", { text: "Send Kin to a friend"}));
+				$("#sub_category").append($("<option>", { text: "Send Kin to / from an exchange walle"}));
+			break;
+			case "Backup & Restore your Kin":
+				$("#sub_category").append($("<option>", { text: "How to backup your account"}));
+				$("#sub_category").append($("<option>", { text: "Uninstalling / Reinstalling Kinit"}));
+				$("#sub_category").append($("<option>", { text: "Moving to a new device"}));
+				$("#sub_category").append($("<option>", { text: "Can’t remember my security answers"}));
+				$("#sub_category").append($("<option>", { text: "Can’t find the email with the QR code"}));
+			break;
+			case "Earn Kin":
+				$("#sub_category").append($("<option>", { text: "Settings / Preferences"}));
+				$("#sub_category").append($("<option>", { text: "Not receiving a reward"}));
+				$("#sub_category").append($("<option>", { text: "Answer submission"}));
+				$("#sub_category").append($("<option>", { text: "Not getting new activities"}));
+			break;
+			case "Gift Cards":
+				$("#sub_category").append($("<option>", { text: "Specific offer disappeared / out of stock"}));
+				$("#sub_category").append($("<option>", { text: "Code is missing after payment"}));
+				$("#sub_category").append($("<option>", { text: "Incorrect code"}));
+				$("#sub_category").append($("<option>", { text: "Buy only with Kin earned on Kinit"}));
+			break;
+			case "My Kin Balance":
+				$("#sub_category").append($("<option>", { text: "Incorrect Kin balance"}));
+			break;
+			case "Other":
+				$("#sub_category").append($("<option>", { text: "Report a bug"}));
+			break;
+		}
         $("#sub_category option").each(function () {
             $(this).val($(this).text())
         })
