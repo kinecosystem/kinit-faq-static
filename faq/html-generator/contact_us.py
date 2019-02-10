@@ -5,7 +5,7 @@ GEN_CODE_HTML = "<!-- GENERATED CODE -->"
 GEN_CODE_JS = "/** GENERATED CODE */"
 
 
-def generate_cotagory_menu(category_list):
+def generate_cotegory_menu(category_list):
     doc, tag, text, line = Doc().ttl()
 
     line('option', '- choose -')
