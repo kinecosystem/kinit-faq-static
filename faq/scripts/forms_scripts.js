@@ -1,5 +1,6 @@
 $(document).ready(() => {
     let setup = true
+    window.Events.formPageLoaded({ 'form_name': $('#ticket').attr('name') })
 
     const urlParam = (name) => {
         const results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
@@ -97,6 +98,7 @@ $(document).ready(() => {
                 break;
             case "Other":
                 $("#sub_category").append($("<option>", { text: "Report a bug" }));
+                $("#sub_category").append($("<option>", { text: "On-boarding error" }));
                 break;
         }
         $("#sub_category option").each(function () {
