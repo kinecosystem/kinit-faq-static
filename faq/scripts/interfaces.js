@@ -16,7 +16,7 @@ $(document).ready(() => {
         }
     }
     else if (window.webkit !== undefined) {
-        let interfaces = ["contactSupport", "supportSubmitted", "supportRequestSent", "showSubmissionError", "pageLoaded", "isPageHelpfulSelection", "formPageLoaded"]
+        let interfaces = ["contactSupport", "supportSubmitted", "supportRequestSent", "showSubmissionError", "pageLoaded", "isPageHelpfulSelection", "formPageLoaded", "feedbackSubmitted", "feedbackFormSent"]
 
         // build event object
         for (const name of interfaces) {
