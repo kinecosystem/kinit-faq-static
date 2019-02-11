@@ -3,7 +3,7 @@ $(document).ready(() => {
 
     if (window.Kinit !== undefined) {
         // get only functions
-        let interfaces = Object.getOwnPropertyNames(window.Kinit).filter(f => typeof window.Kinit[f] === 'function').values()
+        let interfaces = Object.getOwnPropertyNames(window.Kinit).filter(f => typeof window.Kinit[f] === 'function')
 
         // build event object
         for (const name of interfaces) {
