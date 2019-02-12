@@ -1,71 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./script.js"></script>
-
+<html>
+  <head>
+    <base href="https://cdn.kinitapp.com/faq2/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>FAQ</title>
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="tab">
-            <input id="p1" type="checkbox" name="tabs">
-            <label for="p1">Backup & Restore</label>
-            <div class="tab-content">
-                <a href="./pages/backup/how-to-backup.html"><p>How to backup your account</p></a>
-                <a href="./pages/backup/install-uninstall.html"><p>Uninstalling / Reinstalling the app</p></a>
-                <a href="./pages/backup/new-device.html"><p>Moving to a new device</p></a>
-            </div>
+      <div class="tab">
+        <input id="send_kin" type="checkbox" name="tabs" />
+        <label for="send_kin">Send Kin</label>
+        <div class="tab-content">
+          <a href="./pages/send_kin/send_kin_to_another_app.html">
+            <p>Send Kin to another app</p>
+          </a>
+          <a href="./pages/send_kin/send_kin_to_a_friend.html">
+            <p>Send Kin to a friend</p>
+          </a>
+          <a href="./pages/send_kin/send_kin_to_or_from_an_exchange_wallet.html">
+            <p>Send Kin to / from an exchange wallet</p>
+          </a>
         </div>
-        <div class="tab">
-            <input id="p2" type="checkbox" name="tabs">
-            <label for="p2">Earn Activities</label>
-            <div class="tab-content">
-                <a href="./pages/earn/settings-prefs.html"><p>Settings / Preferences</p></a>
-                <a href="./pages/earn/no-reward.html"><p>Not receiving a reward</p></a>
-                <a href="./pages/earn/submission.html?ver=2"><p>Answer submission</p></a>
-                <a href="./pages/earn/no-activities.html?ver=2"><p>Not getting new activities</p></a>
-            </div>
+      </div>
+      <div class="tab">
+        <input id="backup_and_restore_your_kin" type="checkbox" name="tabs" />
+        <label for="backup_and_restore_your_kin">Backup & Restore your Kin</label>
+        <div class="tab-content">
+          <a href="./pages/backup_and_restore_your_kin/how_to_backup_your_account.html">
+            <p>How to backup your account</p>
+          </a>
+          <a href="./pages/backup_and_restore_your_kin/uninstalling_or_reinstalling_kinit.html">
+            <p>Uninstalling / Reinstalling Kinit</p>
+          </a>
+          <a href="./pages/backup_and_restore_your_kin/moving_to_a_new_device.html">
+            <p>Moving to a new device</p>
+          </a>
+          <a href="./pages/backup_and_restore_your_kin/cant_remember_my_security_answers.html">
+            <p>Can’t remember my security answers</p>
+          </a>
+          <a href="./pages/backup_and_restore_your_kin/cant_find_the_email_with_the_qr_code.html">
+            <p>Can’t find the email with the QR code</p>
+          </a>
         </div>
-        <div class="tab">
-            <input id="p3" type="checkbox" name="tabs">
-            <label for="p3">Gift Cards</label>
-            <div class="tab-content">
-                <a href="./pages/gift-cards/no-offer.html"><p>Specific offer disappeared</p></a>
-                <a href="./pages/gift-cards/no-code.html"><p>Code is missing after payment</p></a>
-            </div>
+      </div>
+      <div class="tab">
+        <input id="earn_kin" type="checkbox" name="tabs" />
+        <label for="earn_kin">Earn Kin</label>
+        <div class="tab-content">
+          <a href="./pages/earn_kin/settings_or_preferences.html">
+            <p>Settings / Preferences</p>
+          </a>
+          <a href="./pages/earn_kin/not_receiving_a_reward.html">
+            <p>Not receiving a reward</p>
+          </a>
+          <a href="./pages/earn_kin/answer_submission.html">
+            <p>Answer submission</p>
+          </a>
+          <a href="./pages/earn_kin/not_getting_new_activities.html">
+            <p>Not getting new activities</p>
+          </a>
         </div>
-        <div class="tab">
-            <input id="p4" type="checkbox" name="tabs">
-            <label for="p4">Invite Friends</label>
-            <div class="tab-content">
-                <a href="./pages/invite/invite-friends.html"><p>How to invite friends</p></a>
-                <a href="./pages/invite/referral-program.html"><p>Referral Program</p></a>
-            </div>
+      </div>
+      <div class="tab">
+        <input id="gift_cards" type="checkbox" name="tabs" />
+        <label for="gift_cards">Gift Cards</label>
+        <div class="tab-content">
+          <a href="./pages/gift_cards/specific_offer_disappeared_or_out_of_stock.html">
+            <p>Specific offer disappeared / out of stock</p>
+          </a>
+          <a href="./pages/gift_cards/code_is_missing_after_payment.html">
+            <p>Code is missing after payment</p>
+          </a>
+          <a href="./pages/gift_cards/incorrect_code.html">
+            <p>Incorrect code</p>
+          </a>
+          <a href="./pages/gift_cards/buy_only_with_kin_earned_on_kinit.html">
+            <p>Buy only with Kin earned on Kinit</p>
+          </a>
         </div>
-        <div class="tab">
-            <input id="p5" type="checkbox" name="tabs">
-            <label for="p5">Transferring Kin</label>
-            <div class="tab-content">
-                <a href="./pages/transferring/transf-to-exch.html"><p>Transferring Kin from / to an exchange wallet</p></a>
-                <a href="./pages/transferring/transf-to-app.html"><p>Transferring Kin to another Kin app</p></a>
-            </div>
+      </div>
+      <div class="tab">
+        <input id="my_kin_balance" type="checkbox" name="tabs" />
+        <label for="my_kin_balance">My Kin Balance</label>
+        <div class="tab-content">
+          <a href="./pages/my_kin_balance/incorrect_kin_balance.html">
+            <p>Incorrect Kin balance</p>
+          </a>
         </div>
+      </div>
+      <div class="tab">
+        <input id="other" type="checkbox" name="tabs" />
+        <label for="other">Other</label>
+        <div class="tab-content">
+          <a href="./pages/other/report_a_bug.html">
+            <p>Report a bug</p>
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="more-help">
-        <span class="text">Still need help?</span>
-        <span class="btn" id="contact-support">Contact Us</span>
-    </div>
-</body>
-
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./scripts/interfaces.js"></script>
+  <script src="./scripts/faq_scripts.js"></script>
 </html>
