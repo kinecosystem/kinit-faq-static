@@ -51,7 +51,7 @@ def generate_header(title):
 
     with tag('head'):
         doc.stag(
-            'base', href="https://s3.amazonaws.com/kinapp-static/faq2/")
+            'base', href="https://cdn.kinitapp.com/faq2/")
         doc.stag('meta', charset='utf-8')
         doc.stag('meta', name="viewport",
                  content="width=device-width, initial-scale=1.0")

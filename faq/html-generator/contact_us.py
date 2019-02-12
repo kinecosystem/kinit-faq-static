@@ -28,7 +28,7 @@ def generate_cotegory_menu(category_list):
 
 
 def generate_cotagory_js(json):
-    javascript = 'switch ($("#category").val()) {\n'
+    javascript = 'switch ($("#category").val().replace("and", "&")) {\n'
     for category in json.keys():
         javascript += '\t\t\tcase "' + category + '":\n'
         for sub_category in json[category].keys():

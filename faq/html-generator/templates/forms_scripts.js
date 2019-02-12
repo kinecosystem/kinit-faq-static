@@ -22,7 +22,7 @@ $(document).ready(() => {
         $('#sending').show()
 
         host = $('#debug').val() != 'false' ? "https://stage2.kinitapp.com" : "https://api2.kinitapp.com"
-        redirect = "https://s3.amazonaws.com/kinapp-static/faq2"
+        redirect = "https://cdn.kinitapp.com/faq2//faq2"
         endpoint = $("#ticket").attr("name") == "contact-us" ? "/support/contact-us" : "/support/feedback"
         onSuccessEndpoint = $("#ticket").attr("name") == "contact-us" ? "/support/ticket-submitted.html" : "/support/feedback-submitted.html"
         data = $("#ticket").serializeObject()
