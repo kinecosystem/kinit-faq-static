@@ -5,7 +5,7 @@ import pages
 import os
 import json
 
-with open(os.path.dirname(__file__) + '/../assets/database.json', 'r') as json_file:
+with open(os.path.dirname(__file__) + '/../assets/content.json', 'r') as json_file:
     json_data = json.load(json_file)
 
 index.prep_dirs(json_data)

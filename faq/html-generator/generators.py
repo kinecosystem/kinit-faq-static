@@ -1,7 +1,7 @@
 """
 This is a file generator for Kinit FAQ
 
-The code will traverse through database.json, 
+The code will traverse through content.json, 
 creating a folder for every top element (category)
 with file (small-case underscored) with the text 
 and will wrap it in html template
